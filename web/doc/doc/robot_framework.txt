@@ -38,7 +38,11 @@
         pip install --upgrade robotframework-requests 
         pip install --upgrade robotframework-seleniumlibrary 
 	    python -m pip install --upgrade pip
-
+        pip install robotframework-databaselibrary (Para instalar o banco de dados)
+        pip install robotframework-pabot (Para instalar o pabot)
+        pip install robotframework-ride (Para instalar o ride)
+        pip install robotframework-requests (Para instalar o requests)
+        pip install -U robotframework-difflibrary (Para instalar o difflibrary)
         BeautifulSoup: uma biblioteca para analisar e extrair dados de documentos HTML e XML. 
         Requests: uma biblioteca para fazer requisições HTTP em Python.
         Selenium: uma biblioteca para automatizar a interação com páginas web, incluindo preenchimento 
