@@ -1,0 +1,663 @@
+🔹 Ambiente Python:
+    py -3 -m venv .venv ou python -m venv .venv
+    .\.venv\Scripts\Activate.ps1
+    pip --version (Para consultar versão do pip)
+    python --version (Para consultar versão do Python)
+    robot --version (Para consultar versão do Robot)
+    pip list (Para listar as bibliotecas instaladas)
+    pip freeze (Para listar as bibliotecas instaladas)
+    pip install -U pip (Para atualizar o pip)
+  
+🔹 Bibliotecas Robotframework:
+
+    Existem várias bibliotecas em Python que podem ser usadas. 
+    Para fazer web scraping pegar dados, e robotframework para testes de interface.
+    
+    Crawler - Web scraping - Pegar dados da web 
+    Robotframework - Testes de interface
+    
+    📌 Algumas das bibliotecas mais populares são:
+
+        pip install scrapy  - Crawler spider para pegar dados da web
+        pip install mysql-connector-python - Conexão com banco de dados MySQL
+        pip install cryptography - Criptografia em Python 
+        pip install beautifulsoup4 - Analisar e extrair dados de documentos HTML e XML 
+        pip install robotframework - Automação de teste de aceitação 
+        pip install requests - Requisições HTTP em Python 
+        pip install selenium - Automatizar a interação com páginas web 
+        pip install pyquery - Analisar e extrair dados de documentos HTML usando seletores CSS 
+        pip install python-dateutil - Trabalhar com datas e horários em Python 
+        pip install robotframework-seleniumlibrary - Automação de teste de aceitação
+        pip install pandas - Manipulação e análise de dados
+        pip install robotframework-databaselibrary - Automação de teste de aceitação
+        pip install mysql-connector-python - Conexão com banco de dados MySQL
+        pip install pyodbc - Conexão com banco de dados SQL Server
+        pip install robotframework (Para instalar o Robot)
+        pip install robotframework-seleniumlibrary (Para instalar o selenium library)
+        pip install -U robotframework-seleniumlibrary (Para atualizar a biblioteca)
+        pip install --upgrade robotframework-requests 
+        pip install --upgrade robotframework-seleniumlibrary 
+	    python -m pip install --upgrade pip
+
+        BeautifulSoup: uma biblioteca para analisar e extrair dados de documentos HTML e XML. 
+        Requests: uma biblioteca para fazer requisições HTTP em Python.
+        Selenium: uma biblioteca para automatizar a interação com páginas web, incluindo preenchimento 
+        de formulários e simulação de cliques em botões. 
+        PyQuery: uma biblioteca para analisar e extrair dados de documentos HTML usando seletores CSS. 
+        Cryptography: uma biblioteca para criptografia em Python. pip install cryptography
+        Datetime e Dateutil: bibliotecas para trabalhar com datas e horários em Python. 
+
+        Cada biblioteca tem suas próprias vantagens e desvantagens, e a 
+         escolha da biblioteca depende do caso de uso específico. 
+         O Scrapy é uma biblioteca poderosa e flexível para web scraping, 
+         mas pode ser um pouco mais complexa de usar do que outras bibliotecas. 
+         O BeautifulSoup é uma biblioteca popular e fácil de usar para analisar documentos HTML, 
+         enquanto o Selenium é útil para interagir com páginas web que usam JavaScript.
+
+🔹 Estrutura Robotframework:
+
+    📌 Ideias de Brainstorming sobre Automação de Testes com Robot Framework
+
+        - Como criar uma estrutura de projeto eficiente
+        - Melhores práticas para escrever testes automatizados
+        - Como integrar o Robot Framework com outras ferramentas de automação
+        - Como lidar com problemas comuns em testes automatizados
+        - Como escrever testes para diferentes tipos de aplicações (desktop, web, mobile)
+        - Como gerar relatórios de testes detalhados
+
+    📌 Exemplo: teste de interface com o Robot Framework
+    
+        ** Settings **
+        Library  SeleniumLibrary
+
+        ** Variables **
+        ${URL}       https://robotframework.org
+        ${BROWSER}   chrome
+
+
+        ** Keywords **
+        Abrir Site
+            Open Browser  ${URL}  ${BROWSER}
+
+        ** Test Cases **
+        Cenário 1: Acessando o site do Robot
+            Abrir Site
+
+    📌 Aqui está uma explicação de cada seção do arquivo `estrutura.robot`:
+
+        # - `***Settings***`: Esta seção é usada para definir as configurações do projeto, como bibliotecas, 
+        # variáveis globais e configurações de execução. Por exemplo, você pode definir a biblioteca Selenium 
+        # para automatizar testes em um navegador da web.
+
+        # - `***Variables***`: Esta seção é usada para definir variáveis que podem ser usadas em todo o projeto. 
+        # Por exemplo, você pode definir uma variável para armazenar o URL do site que está sendo testado.
+
+        # - `***Keywords***`: Esta seção é usada para definir palavras-chave personalizadas 
+        # que podem ser usadas em todo o projeto. Por exemplo, você pode definir uma palavra-chave para fazer login em um site.
+
+        # - `***Test Cases***`: Esta seção é usada para definir casos de teste. Cada caso de teste 
+        # é definido como um conjunto de etapas que o Robot Framework executará. Por exemplo, você pode 
+        # definir um caso de teste para fazer login em um site e verificar se o usuário é redirecionado para a página correta.
+
+        # Cada seção é definida com três asteriscos (`***`) seguidos pelo nome da seção. 
+        # As seções são encerradas com uma linha em branco. As seções `***Settings***`, `***Variables***` e `***Keywords***` 
+        # podem ser definidas em qualquer ordem, mas a seção `***Test Cases***` deve ser a última seção no arquivo.
+
+        # O Robot Framework é uma ferramenta de automação de teste de aceitação de código aberto 
+        que utiliza uma sintaxe fácil de ler e escrever em arquivos de texto simples.  
+
+        # O Robot Framework usa o conceito "keywords driving" refere-se ao uso de palavras-chave 
+        personalizadas para dirigir a automação de teste.
+
+🔹 Estrutura XPath:
+    
+    📌 Estrutura XPath 1:
+    
+       📌 Atencao: O indetificador unico do elemento que pode ser "name", "id", "class", "xpath"
+       
+            Exemplo 1: //button[@id='name']
+            Sempre comeca com duas barras // e depois o nome da elemento que pode ser "input" , "button" , select , div , tbody
+            e assim por diante, depois abre colchetes e coloca o atributo que pode ser id, name, class, type, value, etc. 
+            
+            Exemplo 2:         //*[@id='name']
+            #             xpath=//*[@id="name"]
+            Podemos usar o asterisco * para selecionar qualquer elemento, e nao precisamos colocar o nome do elemento.
+            Essa pode ser um seletor mais genérico, pois seleciona qualquer elemento que tenha um atributo id com o valor name.
+
+            Exemplo 3:         //*[contains(@id,'name')]
+            #                   //button[@id='name']
+            #                    //*[@id="name"]
+           
+            # No caso button, depois abre colchetes e coloca o atributo 
+	        # Essa estrutura XPath é composta por um caminho de seleção que começa com o caractere
+	        # `//`, que significa que a seleção pode começar em qualquer lugar do documento. 
+	        # Em seguida, temos o caractere `*`, que significa que estamos selecionando qualquer elemento. 
+	        # Depois, temos o atributo `id` com o valor `name`, que é especificado entre colchetes. 
+	        # Isso significa que estamos selecionando qualquer elemento que tenha um atributo `id` com o valor `name`. 
+            # Em resumo, essa estrutura XPath seleciona qualquer elemento que 
+	        # tenha um atributo `id` com o valor `name` em qualquer lugar do documento. 
+	        # Essa estrutura XPath é composta por um caminho de seleção que começa com o caractere
+	        # `//`, que significa que a seleção pode começar em qualquer lugar do documento. 
+	        # Em seguida, temos o caractere `*`, que significa que estamos selecionando qualquer elemento. 
+	        # Depois, temos o atributo `id` com o valor `name`, que é especificado entre colchetes. 
+	        # Isso significa que estamos selecionando qualquer elemento que tenha um atributo `id` com o valor `name`. 
+            # Em resumo, essa estrutura XPath seleciona qualquer elemento que 
+	        # tenha um atributo `id` com o valor `name` em qualquer lugar do documento.
+    
+    📌 Estrutura XPath 2:
+
+        *** Settings ***
+            Documentation    Teste de automação para preencher formulário
+                Library          SeleniumLibrary
+
+        *** Variables ***
+        ${BROWSER}        chrome
+        ${TIMEOUT}        3s
+        ${URL}            https://itera-qa.azurewebsites.net/home/automation
+        ${NOME}           Arya Stark
+        ${TELEFONE}       555-1234
+        ${EMAIL}          arya.stark@winterfell.com
+        ${SENHA}          123456
+        ${ENDERECO}       Rua Winterfell
+
+        *** Keywords ***
+        Abrir o navegador e maximizar a janela
+            [Arguments]    ${url}
+            Open Browser    ${url}    ${BROWSER}
+            Maximize Browser Window
+
+        Preencher formulário com dados
+            [Arguments]    ${nome}    ${telefone}    ${email}    ${senha}    ${endereco}
+            Input Text    xpath=//*[@id="name"]    ${nome}
+            Input Text    xpath=//*[@id="phone"]    ${telefone}
+            Input Text    xpath=//*[@id="email"]    ${email}
+            Input Text    xpath=//*[@id="password"]    ${senha}
+            Input Text    xpath=//*[@id="address"]    ${endereco}
+            Click Element    xpath=//button[@name='submit']
+            Capture Page Screenshot
+
+        *** Test Cases ***
+        Cenario 1 - Preencher formulário com dados
+            [Documentation]    Preenche o formulário com dados
+            [Tags]             formulario, iteratest
+            Abrir o navegador e maximizar a janela    ${URL}
+            Preencher formulário com dados    ${NOME}    ${TELEFONE}    ${EMAIL}    ${SENHA}    ${ENDERECO}
+            Sleep    3s
+            Close Browser
+
+    📌 Estrutura XPath 3:
+
+        <select id="select" name="select">
+            <option value="1">Coca Cola</option>
+            <option value="2">Guarana </option>
+            <option value="3">Sukita </option>
+            <option value="4">Agua </option>
+            <option value="5">Cerveja</option>
+        
+        Nao e boa pratica:
+        //option[3] - Nao e boa pratica, por que voce pode ter mais de um elemento com o mesmo nome
+        
+        Boa pratica:
+        //select[@id='select']/option[@value='1'] - Boa pratica, por que voce esta selecionando o elemento pelo atributo value
+        //option[contains(text(),'Sukita')]       - Boa pratica, por que voce esta selecionando o elemento pelo texto
+
+        Outras praticas:
+        //select[@id='select']/option[@value='1']
+        //option[@value='1']
+        //option[@value='2']
+        //option[@value='3']
+        //option[@value='4']
+        //option[@value='5']
+        //option[@value='1']/text()
+
+        # //option[@value='1']/text()
+        # //option[@value='1']/@value
+        # //option[@value='1']/@id
+        # //option[@value='1']/@name
+        # //option[@value='1']/@class
+
+🔹O que é BDD:
+
+    📌 BDD significa Behavior-Driven Development (Desenvolvimento Orientado a Comportamento, em português).
+     
+        É uma técnica de desenvolvimento de software que visa melhorar a comunicação entre desenvolvedores, 
+         gerentes de projeto e partes interessadas no projeto, como clientes e usuários finais.
+
+        O BDD é baseado em testes automatizados que descrevem o comportamento esperado do software 
+         em termos de cenários de uso. Esses cenários são escritos em uma linguagem natural, 
+         como o inglês, e são usados para validar o comportamento do software em relação aos requisitos do usuário.
+
+        O BDD é uma abordagem colaborativa que envolve todas as partes interessadas no projeto, 
+         desde o início do desenvolvimento até a entrega do software. Ele ajuda a garantir que o 
+         software atenda aos requisitos do usuário e que os testes sejam escritos em uma linguagem 
+         clara e compreensível para todos os envolvidos no projeto.
+
+        No Robot Framework, o BDD é implementado usando a sintaxe Gherkin, que é uma linguagem de 
+         especificação de comportamento. Os cenários são escritos em arquivos .feature e 
+         são executados usando as bibliotecas de teste do Robot Framework.
+    
+    📌 Estrutura BDD
+
+        ***Settings***
+        Library                                     SeleniumLibrary
+        # Library e a biblioteca que vai ser utilizada no projeto
+
+        ***Variables***
+        # Variables sao as variaveis que vao ser utilizadas no projeto
+        ${NOMEDAMUSICA}                             Alok - Ocean (feat. Zeeba & IRO) | Lyric Video - YouTube
+        ${BROWSER}                                  Chrome
+        ${URL}                                      https://www.youtube.com/
+        ${INPUT_PESQUISA}                           //input[@id='search']
+        ${BUTTON_PESQUISA}                          //button[@id='search-icon-legacy']
+        ${PRIMEIRO}                                 (//yt-formatted-string[@class="style-scope ytd-video-renderer"])[1]
+        ${PROVA}                                    //*[@id="movie_player"]
+
+        ***Keywords***
+        Dado que eu acesso o site do youtube
+        Open Browser                            ${URL}  ${BROWSER} 
+        Maximize Browser Window
+        Set Selenium Speed                       0.5s
+
+        Quando eu digito o nome da musica
+        Input Text                              ${INPUT_PESQUISA}    ${NOMEDAMUSICA}
+
+        E clico no botao de pesquisa
+        Click Element                           ${BUTTON_PESQUISA}
+
+        E clico na primeira opcao da lista
+        Wait Until Element Is Visible           ${PRIMEIRO}
+        Click Element                           ${PRIMEIRO}
+
+        Entao o video e executado
+        Wait Until Element Is Visible           ${PROVA}
+        Sleep                                   300s
+        Close Browser
+
+        ***Test Cases***
+        Cenario 1: Executar video no site do youtube
+        Dado que eu acesso o site do youtube 
+        # "Given" que eu acesso o site do youtube
+        Quando eu digito o nome da musica
+        # "When" eu digito o nome da musica
+        E clico no botao de pesquisa
+        # "And" clico no botao de pesquisa
+        E clico na primeira opcao da lista
+        # "And" clico na primeira opcao da lista
+        Entao o video e executado
+        # "Then" o video e executado
+
+    📌 Exemplo xpath, robotframework acima:
+            # (//yt-formatted-string[@class="style-scope ytd-video-renderer"])[1]
+            #//*[@id="subscribe-button"]/ytd-button-renderer/yt-button-shape/button/yt-touch-feedback-shape/div/div[1]
+            # //*[@id="video-title"]/yt-formatted-string
+            # //*[@id="video-title"]/yt-formatted-string
+
+🔹 Formas de execucao do Teste:
+
+    📌 Arquivos gerados apos o teste: 
+    
+        Log | Report | Output
+
+        Todos os teste rodando no paramentro BDD ou tradicional vai gerar 
+         alguns arquivos, como arquivo de logs para verificar quais teste deu errado, 
+         report vai gerar um arquivo para detalhar mais todo teste que foi executado, 
+         output vai gerar um arquivo com o resultado de todos os teste que foram
+         executados.
+
+        O Robot Framework gera três arquivos após a execução dos testes: o arquivo de log, 
+         o arquivo de relatório e o arquivo de saída.
+
+        O arquivo de log contém informações detalhadas sobre a execução dos testes, 
+         incluindo informações sobre cada palavra-chave executada, o resultado de cada 
+         teste e quaisquer erros ou exceções que ocorreram durante a execução dos testes. 
+         O arquivo de log é útil para depurar problemas e entender o que aconteceu durante 
+         a execução dos testes.
+
+        O arquivo de relatório é uma versão resumida do arquivo de log e fornece uma visão 
+         geral dos resultados dos testes. Ele inclui informações sobre quantos testes foram 
+         executados, quantos passaram e quantos falharam. O arquivo de relatório é útil para 
+         entender rapidamente o resultado geral dos testes.
+
+        O arquivo de saída é um arquivo de log em formato XML que pode ser usado para gerar 
+         relatórios personalizados ou integrar com outras ferramentas de teste. 
+         Ele contém informações detalhadas sobre a execução dos testes, incluindo informações 
+         sobre cada palavra-chave executada, o resultado de cada teste e quaisquer erros ou 
+         exceções que ocorreram durante a execução dos testes.
+        
+    📌 Comandos de execucao:
+
+        1 - robot bdd_4.robot | Executa todos os teste do arquivo
+        2 - robot teste_4.robot | Executa todos os teste do arquivo
+        3 - robot -d ./logs teste_4.robot | Executa todos os teste do arquivo e gera uma pasta 
+            de log com os arquivo Log | Report | Output
+        4 - robot -d logs teste_3.robot | Executa todos os teste do arquivo e 
+            gera os arquivos Log | Report | Output dentro da pasta logs
+        5 - robot -d logs -i "Cenario 1" teste_1.robot | Executa apenas o teste Cenario 1
+        6 - robot -d logs -t "Cenario 1" teste_1.robot | Executa apenas o teste Cenario 1
+        7 - robot -d logs -i "Cenario 1" -e "Cenario 2" teste_1.robot | Executa apenas o teste Cenario 1
+            e ignora o teste Cenario 2
+        8 - robot -d logs -i "Cenario 1" -e "Cenario 2" -v BROWSER:firefox teste_1.robot | Executa apenas o teste Cenario 1
+            e ignora o teste Cenario 2 e executa no navegador firefox
+        9 - robot -d logs -i "Cenario 1" -e "Cenario 2" -v BROWSER:opera -v URL:https://www.youtube.com/ teste_1.robot 
+            | Executa apenas o teste Cenario 1
+        10 robot -d logs -i "Cenario 1" -e "Cenario 2" -v BROWSER:Chrome -v URL:https://www.youtube.com/ teste_1.robot 
+            | Executa apenas o teste Cenario 1
+        11 - robot -d web test | Executa todos testes que estao dentro da pasta test
+        12 - robot -d logs -t "Cenario 1" -v BROWSER:Chrome -v URL:https://www.youtube.com/ teste_1.robot 
+            | Executa apenas o teste Cenario 1
+        13 - robot -d logs -t "Cenario 1"  teste_1.robot
+            | Executa apenas o teste Cenario 1
+        14 - robot -d logs -i amazon test
+            | Executa apenas o teste que tem a tag amazon
+        
+    📌 O que é Suite:
+
+        Uma suite de teste no Robot Framework é um conjunto de testes que são agrupados em um único arquivo. 
+         Cada arquivo de teste pode conter várias suites de teste, e cada suite de teste pode conter vários casos de teste.
+
+        Uma suite de teste é definida usando a sintaxe *** Test Cases *** no arquivo de teste. 
+         Dentro de uma suite de teste, você pode definir vários casos de teste, cada um com sua própria sintaxe 
+         *** Test Case ***. Cada caso de teste pode conter várias palavras-chave, 
+         que são usadas para executar ações e verificar resultados.
+
+        As suites de teste são úteis para agrupar testes relacionados em um único arquivo 
+         e para organizar seus testes de uma maneira que faça sentido para o seu projeto. 
+         Por exemplo, você pode ter uma suite de teste para testar a funcionalidade de login 
+         do seu aplicativo e outra suite de teste para testar a funcionalidade de checkout.
+
+        Ao executar o Robot Framework, você pode escolher executar todas as suites de teste 
+         em um arquivo ou apenas uma suite de teste específica. Isso permite que você execute 
+         testes específicos ou execute todos os testes em um arquivo de uma só vez.
+
+
+    📌 Exemplo de suite de teste, Pasta tambem pode ser Suite de teste
+
+        ***Test Cases***
+
+        Cenario 1 - Pesquisar site da Amazon
+        Abrir site no Amazon    
+
+
+        Cenario 2 - Pesquisar site do Facebook
+        Abrir site no Facebook    
+    
+
+        Cenario 3 - Pesquisar site do Youtube
+        Abrir site no Youtube    
+    
+
+        Cenario 4 - Pesquisar site do Robot Framework
+        Abrir site no Robot Framework   
+    
+    📌 Teste Regressivo:
+
+        O teste regressivo é uma técnica de teste que é usada para garantir que as 
+         alterações feitas em um software não afetem as funcionalidades existentes. 
+         Ele é executado após uma alteração no software, como uma correção de bug 
+         ou uma nova funcionalidade, para garantir que as alterações não tenham 
+         afetado as funcionalidades existentes.
+
+        O teste regressivo envolve a execução de todos os testes existentes 
+         no software após uma alteração ter sido feita. Isso é feito para garantir
+         que as alterações não tenham afetado as funcionalidades existentes e que 
+         o software ainda esteja funcionando corretamente.
+
+        O teste regressivo é importante porque as alterações feitas em um software 
+         podem ter efeitos colaterais inesperados em outras partes do software. 
+         O teste regressivo ajuda a identificar esses efeitos colaterais e a 
+         garantir que o software ainda esteja funcionando corretamente após 
+         uma alteração ter sido feita.
+
+        O teste regressivo pode ser executado manualmente ou automaticamente. 
+         A automação do teste regressivo é geralmente preferida, pois é mais 
+         rápida e menos propensa a erros do que a execução manual. O Robot 
+         Framework é uma ferramenta de automação de teste que pode ser 
+         usada para executar testes regressivos em um software 
+
+    📌 Tags e Argumentos
+
+        No Robot Framework, as tags e argumentos são usados para organizar e personalizar seus testes.
+        
+        As tags são palavras-chave que você pode adicionar a seus casos de teste e suites de teste 
+         para agrupá-los e organizá-los. Por exemplo, você pode adicionar a tag "login" a 
+         todos os casos de teste que testam a funcionalidade de login do seu aplicativo. 
+         Isso permite que você execute todos os testes de login de uma só vez, em vez de 
+         ter que executar cada caso de teste individualmente.
+
+        Os argumentos são valores que você passa para suas palavras-chave para personalizar 
+         a execução dos testes. Por exemplo, você pode passar um nome de usuário e senha 
+         como argumentos para uma palavra-chave de login. Isso permite que você execute 
+         a palavra-chave de login com diferentes valores de nome de usuário e senha em 
+         diferentes casos de teste.
+
+        As tags e argumentos são úteis para organizar e personalizar seus testes de acordo 
+         com as necessidades do seu projeto. Eles permitem que você execute testes específicos
+         ou agrupe testes relacionados em uma única execução.
+
+
+🔹 Estruturação do Projeto de Teste
+
+    📌 Ideias de Brainstorming sobre Automação de Testes com Robot Framework
+
+        - Como criar uma estrutura de projeto eficiente
+        - Melhores práticas para escrever testes automatizados
+        - Como integrar o Robot Framework com outras ferramentas de automação
+        - Como lidar com problemas comuns em testes automatizados
+        - Como escrever testes para diferentes tipos de aplicações (desktop, web, mobile)
+        - Como gerar relatórios de testes detalhados
+
+    📌 Dicionário de dados no Robot Framework
+
+        O dicionário de dados no Robot Framework é uma estrutura de dados que é usada para armazenar 
+         informações que são usadas em vários testes. Ele é definido como uma variável global no arquivo 
+         de recursos e pode ser acessado em qualquer lugar do projeto.
+
+        O dicionário de dados é útil para armazenar informações que são usadas em vários testes, 
+         como URLs, nomes de usuários, senhas e outras informações de configuração. Ele permite que 
+         você defina essas informações em um único lugar e as use em vários testes, em vez de ter que
+         definir as mesmas informações em cada caso de teste individualmente.
+
+        O dicionário de dados é definido usando a sintaxe *** Variables *** no arquivo de recursos.
+         Dentro dessa seção, você pode definir várias variáveis e atribuir valores a elas. 
+         Essas variáveis podem ser acessadas em qualquer lugar do projeto usando a sintaxe ${nome_da_variável}.
+
+        Por exemplo, você pode definir um dicionário de dados para armazenar informações de login, como
+         o nome de usuário e a senha. Você pode então acessar essas informações em vários testes usando 
+         a sintaxe ${nome_de_usuario} e ${senha}.
+
+        O dicionário de dados é uma ferramenta útil para organizar e reutilizar informações em seus 
+         testes. Ele permite que você defina informações em um único lugar e as use em vários testes, 
+         o que pode economizar tempo e reduzir a duplicação de código.
+
+    📌 O conceito de "Page Object" - Mapeamento do Teste
+    
+        E uma técnica de automação de teste que é usada para separar a lógica de teste da lógica 
+         de interface do usuário. Ele envolve a criação de objetos que representam as páginas 
+         do aplicativo e o uso desses objetos para interagir com a interface do usuário durante a execução dos testes.
+
+        O objetivo do "Page Object" é criar uma camada de abstração entre os testes e a interface do usuário. 
+         Isso permite que os testes sejam mais fáceis de escrever e manter, pois a lógica de interface do usuário 
+         é encapsulada nos objetos de página. Além disso, o "Page Object" permite que os testes sejam mais robustos, 
+         pois as alterações na interface do usuário podem ser facilmente refletidas nos objetos de página, em vez de 
+         exigir alterações em todos os testes.
+
+        No Robot Framework, o processo de teste de automação com "Page Object" envolve a criação de objetos 
+         de página que representam as páginas do aplicativo. Esses objetos de página são então usados para interagir 
+         com a interface do usuário durante a execução dos testes.
+        
+        Por exemplo, você pode criar um objeto de página para representar a página de login do seu aplicativo.
+         Esse objeto de página pode conter métodos para preencher o nome de usuário e a senha, clicar no botão 
+         de login e verificar se o login foi bem-sucedido. Durante a execução dos testes, você pode usar esse 
+         objeto de página para interagir com a página de login, em vez de ter que escrever código para interagir 
+         com a interface do usuário diretamente.
+
+        O uso de "Page Object" no processo de teste de automação com Robot Framework pode tornar seus testes 
+         mais fáceis de escrever e manter, além de torná-los mais robustos e menos propensos a erros. 
+
+    📌 O que é  `Setup` e o `Teardown`
+    
+        No Robot Framework, o `Setup` e o `Teardown` são keywords especiais que são executados antes e depois de cada caso de teste, 
+         espectivamente. 
+
+        O `Setup` é usado para configurar o ambiente de teste antes da execução do caso de teste. 
+         Por exemplo, pode ser usado para abrir um navegador ou para fazer login em um sistema.
+
+        O `Teardown` é usado para limpar o ambiente de teste após a execução do caso de teste. 
+         Por exemplo, pode ser usado para fechar o navegador ou para limpar dados de teste.
+
+        Esses keywords são úteis para garantir que o ambiente de teste esteja sempre em um estado 
+         conhecido e consistente antes e depois da execução de cada caso de teste.
+
+        Podemos dizer que o "test setup" serve para configurar o ambiente de teste antes da execução 
+         do caso de teste e o "test teardown" serve para limpar o ambiente de teste após a execução 
+         do caso de teste.
+
+         test setup - fazer teste em site de viagens e sempre fazer o cadastro antes de iniciar o teste
+         test teardown - limpar o ambiente de teste após a execução do caso de teste
+
+
+        - `Test Setup`: é um keyword especial que é executado antes de cada caso de teste. 
+         É usado para configurar o ambiente de teste para um caso de teste específico. 
+         Por exemplo, pode ser usado para abrir um arquivo ou para limpar dados de teste.
+
+        - `Suite Setup`: é um keyword especial que é executado uma vez antes de todos 
+         os casos de teste em uma suíte de testes. É usado para configurar o ambiente 
+         de teste para todos os casos de teste em uma suíte. Por exemplo, pode ser usado 
+         para abrir um navegador ou para fazer login em um sistema.
+
+        - `Test Teardown`: é um keyword especial que é executado após cada caso de teste. 
+         É usado para limpar o ambiente de teste após a execução de um caso de teste específico. 
+         Por exemplo, pode ser usado para fechar um arquivo ou para limpar dados de teste.
+
+        - `Suite Teardown`: é um keyword especial que é executado uma vez após todos os casos de teste
+
+🔹 Boas praticas Robotframework
+
+    📌 Ideias de Brainstorming sobre Automação de Testes com Robot Framework
+
+        - Como criar uma estrutura de projeto eficiente
+        - Melhores práticas para escrever testes automatizados
+        - Como integrar o Robot Framework com outras ferramentas de automação
+        - Como lidar com problemas comuns em testes automatizados
+        - Como escrever testes para diferentes tipos de aplicações (desktop, web, mobile)
+        - Como gerar relatórios de testes detalhados
+        - Nao colocar keyword da library diretamente no test Case
+        - Nunca colocar elementos (xpath,id,css selector) diretamente nas Keywords
+        - Sempre utilizar "wait until element is visible" ao realizar interacoes com elemento
+        - Preferir utilizar "wait until element is visible" ao inves de utlizar "sleep"
+        - Utilize um padrao de projeto caso va desenvolver um projeto de automacao grande
+        - Olhe o log da execucao em caso de falha
+        - Otimeze seu codigo para que ele seja facil de ler e manter
+
+Anvacado
+🔹 Bibliotecas Built-in 
+
+    📌 O que são bibliotecas built-in
+
+        - **Built-in**: As keywords built-in são as keywords padrão do Robot Framework que 
+        estão disponíveis sem a necessidade de importar bibliotecas externas. Algumas das 
+        keywords built-in mais comuns incluem `Log`, `Should Be Equal`, `Run Keyword If`, `Run Keyword And Ignore Error`, entre outras.
+
+        - **Argumentos esperados**: As keywords que esperam argumentos são aquelas que recebem 
+        um ou mais argumentos para executar uma ação específica. Por exemplo, 
+        a keyword `Should Be Equal` espera dois argumentos: o valor esperado e o valor atual.
+         Se esses valores não forem iguais, a keyword falhará.
+
+        - **Falhas previstas**: As falhas previstas são aquelas que são esperadas durante 
+        a execução de um teste. Por exemplo, se você estiver testando uma função que deve 
+        retornar um erro quando um argumento inválido é passado, você pode usar 
+        a keyword `Run Keyword And Expect Error` para verificar se a função realmente
+         retorna um erro.
+
+        - **For**: A keyword `For` é usada para iterar sobre uma lista ou um dicionário. 
+        Por exemplo, se você tiver uma lista de valores que deseja verificar usando a 
+        keyword `Should Be Equal`, pode usar a keyword `For` para iterar sobre a lista 
+        e verificar cada valor individualmente.
+
+        - **Teardowns**: As keywords teardown são usadas para executar ações após 
+        a conclusão de um teste ou suíte de testes. Por exemplo, se você estiver
+         testando uma aplicação web, pode usar uma keyword teardown para fechar 
+         o navegador após a conclusão de cada teste. As keywords teardown são 
+         definidas usando a seção 
+         `*** Test Teardown ***` ou `*** Suite Teardown ***` no arquivo de teste.
+    
+🔹 Bibliotecas library DateTime
+
+    A biblioteca DateTime é uma das bibliotecas padrão do Robot Framework e 
+    fornece keywords para trabalhar com datas e horas. Com a biblioteca DateTime, 
+    é possível realizar operações como adicionar ou subtrair tempo de uma data, 
+    formatar datas e horas e calcular a diferença entre duas datas.
+    Algumas das keywords mais comuns da biblioteca DateTime incluem:
+
+    Get Current Date: retorna a data atual no formato YYYY-MM-DD.
+    Get Current Time: retorna a hora atual no formato HH:MM:SS.
+    Get Current Date Time: retorna a data e hora atual no formato YYYY-MM-DD HH:MM:SS.
+    Convert Date: converte uma data de um formato para outro.
+    Convert Time: converte uma hora de um formato para outro.
+    Add Time To Date: adiciona uma quantidade de tempo a uma data.
+    Subtract Time From Date: subtrai uma quantidade de tempo de uma data.
+    Subtract Date From Date: calcula a diferença entre duas datas.
+    Para usar a biblioteca DateTime em um arquivo de teste do Robot Framework, 
+    basta adicionar a linha Library DateTime à seção Settings do arquivo. 
+    Em seguida, é possível usar as keywords da biblioteca em casos de teste.
+
+
+A biblioteca OperatingSystem fornece keywords para interagir com o sistema operacional em que o Robot Framework está sendo executado. Algumas das keywords mais usadas são:
+
+Get Environment Variable: Retorna o valor de uma variável de ambiente do sistema operacional.
+Get File: Retorna o conteúdo de um arquivo.
+Get File Size: Retorna o tamanho de um arquivo em bytes.
+Get Hostname: Retorna o nome do host do sistema.
+Get Process Id: Retorna o ID do processo atual.
+Get Special Folder Path: Retorna o caminho para uma pasta especial do sistema operacional, como a pasta de documentos ou a pasta de downloads.
+Get Time: Retorna a hora atual do sistema.
+List Directory: Retorna uma lista de arquivos e pastas em um diretório.
+Remove Directory: Remove um diretório e todo o seu conteúdo.
+Remove File: Remove um arquivo.
+Run: Executa um comando no terminal do sistema operacional.
+Set Environment Variable: Define o valor de uma variável de ambiente do sistema operacional.
+Sleep: Pausa a execução do teste por um determinado número de segundos.
+Start Process: Inicia um processo em segundo plano e retorna seu ID.
+Stop Process: Para um processo em segundo plano com base em seu ID.
+Essas são apenas algumas das keywords disponíveis na biblioteca OperatingSystem. Para ver a lista completa de keywords e suas descrições, consulte a documentação oficial do Robot Framework.
+
+A biblioteca String fornece keywords para manipular strings em testes do Robot Framework. Algumas das keywords mais usadas são:
+
+Split String: Divide uma string em uma lista de substrings com base em um separador.
+Get Substring: Retorna uma substring de uma string com base em um índice inicial e final.
+Length Should Be: Verifica se o comprimento de uma string é igual a um valor especificado.
+Should Be Empty: Verifica se uma string está vazia.
+Should Contain: Verifica se uma string contém um determinado valor.
+Should End With: Verifica se uma string termina com um determinado valor.
+Should Match: Verifica se uma string corresponde a uma expressão regular.
+Should Not Be Empty: Verifica se uma string não está vazia.
+Should Not Contain: Verifica se uma string não contém um determinado valor.
+Should Not End With: Verifica se uma string não termina com um determinado valor.
+Should Not Match: Verifica se uma string não corresponde a uma expressão regular.
+Should Start With: Verifica se uma string começa com um determinado valor.
+To Lowercase: Converte uma string para minúsculas.
+To Uppercase: Converte uma string para maiúsculas.
+Essas são apenas algumas das keywords disponíveis na biblioteca String. Para ver a lista completa de keywords e suas descrições, consulte a documentação oficial do Robot Framework.
+
+
+A biblioteca Collections fornece keywords para trabalhar com listas, dicionários e outros tipos de coleções de dados. Algumas das keywords mais usadas são:
+Create Dictionary: Cria um dicionário com pares chave-valor especificados.
+Get From Dictionary: Retorna o valor de uma chave em um dicionário.
+Get Length: Retorna o comprimento de uma lista ou string.
+Get Slice: Retorna uma parte de uma lista ou string com base em um índice inicial e final.
+List Should Contain: Verifica se uma lista contém um determinado valor.
+List Should Not Contain: Verifica se uma lista não contém um determinado valor.
+Log List: Imprime uma lista no console de saída do Robot Framework.
+Remove From List: Remove um valor de uma lista.
+Set Variable If: Define o valor de uma variável com base em uma condição.
+
+
+A biblioteca Process fornece keywords para trabalhar com processos em segundo plano. Algumas das keywords mais usadas são:
+
+Start Process: Inicia um processo em segundo plano e retorna seu ID.
+Stop Process: Para um processo em segundo plano com base em seu ID.
+Get Process Result: Retorna o resultado de um processo em segundo plano com base em seu ID.
+Get Process Return Code: Retorna o código de retorno de um processo em segundo plano com base em seu ID.
+Get Process Output: Retorna a saída de um processo em segundo plano com base em seu ID.
+Get Process Error Output: Retorna a saída de erro de um processo em segundo plano com base em seu ID.
+Essas são apenas algumas das keywords disponíveis nas bibliotecas Collections e Process. Para ver a lista completa de keywords e suas descrições, consulte a documentação oficial do Robot Framework.

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230616 18:26:50.359" rpa="false" schemaversion="3">
+<suite id="s1" name="Database" source="C:\Users\guilh\Downloads\robot_framework\python\robot_teste\database.robot">
+<test id="s1-t1" name="Exemplo 03: Select Statement" line="24">
+<kw name="Conectar no Banco de Dados" type="SETUP">
+<kw name="Connect To Database" library="DatabaseLibrary">
+<arg>dbapiModuleName=psycopg2</arg>
+<arg>dbName=robot</arg>
+<arg>dbUsername=postgres</arg>
+<arg>dbPassword=postgres</arg>
+<arg>dbHost=localhost</arg>
+<arg>dbPort=5432</arg>
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
+<msg timestamp="20230616 18:26:50.442" level="INFO">Connecting using : psycopg2.connect(database=robot, user=postgres, password=postgres, host=localhost, port=5432) </msg>
+<status status="PASS" starttime="20230616 18:26:50.412" endtime="20230616 18:26:50.531"/>
+</kw>
+<status status="PASS" starttime="20230616 18:26:50.411" endtime="20230616 18:26:50.532"/>
+</kw>
+<kw name="Executar query no Banco de dados">
+<var>${RESPOSTA_SELECT}</var>
+<arg>SELECT * from account</arg>
+<kw name="Query" library="DatabaseLibrary">
+<var>${RESPONSE_QUERY}</var>
+<arg>selectStatement=${QUERY}</arg>
+<doc>Uses the input `selectStatement` to query for the values that will be returned as a list of tuples. Set optional
+input `sansTran` to True to run command without an explicit transaction commit or rollback.
+Set optional input `returnAsDict` to True to return values as a list of dictionaries.</doc>
+<msg timestamp="20230616 18:26:50.533" level="INFO">Executing : Query  |  SELECT * from account </msg>
+<msg timestamp="20230616 18:26:50.536" level="INFO">${RESPONSE_QUERY} = [(1, 'May Fernandes', 'robot123', 'robotizando@robot.com'), (2, 'Luiz Silva', 'robot987', 'robotizando2@robot.com')]</msg>
+<status status="PASS" starttime="20230616 18:26:50.533" endtime="20230616 18:26:50.536"/>
+</kw>
+<msg timestamp="20230616 18:26:50.537" level="INFO">${RESPOSTA_SELECT} = [(1, 'May Fernandes', 'robot123', 'robotizando@robot.com'), (2, 'Luiz Silva', 'robot987', 'robotizando2@robot.com')]</msg>
+<status status="PASS" starttime="20230616 18:26:50.532" endtime="20230616 18:26:50.537"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${RESPOSTA_SELECT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230616 18:26:50.537" level="INFO">[(1, 'May Fernandes', 'robot123', 'robotizando@robot.com'), (2, 'Luiz Silva', 'robot987', 'robotizando2@robot.com')]</msg>
+<status status="PASS" starttime="20230616 18:26:50.537" endtime="20230616 18:26:50.537"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Usuário ${RESPOSTA_SELECT[0][0]} - Nome: ${RESPOSTA_SELECT[0][1]} - E-mail: ${RESPOSTA_SELECT[0][3]}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230616 18:26:50.540" level="INFO">Usuário 1 - Nome: May Fernandes - E-mail: robotizando@robot.com</msg>
+<status status="PASS" starttime="20230616 18:26:50.538" endtime="20230616 18:26:50.540"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Usuário ${RESPOSTA_SELECT[1][0]} - Nome: ${RESPOSTA_SELECT[1][1]} - E-mail: ${RESPOSTA_SELECT[1][3]}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230616 18:26:50.542" level="INFO">Usuário 2 - Nome: Luiz Silva - E-mail: robotizando2@robot.com</msg>
+<status status="PASS" starttime="20230616 18:26:50.540" endtime="20230616 18:26:50.542"/>
+</kw>
+<kw name="Desconectar do Banco de Dados" type="TEARDOWN">
+<kw name="Disconnect From Database" library="DatabaseLibrary">
+<doc>Disconnects from the database.</doc>
+<msg timestamp="20230616 18:26:50.543" level="INFO">Executing : Disconnect From Database</msg>
+<status status="PASS" starttime="20230616 18:26:50.543" endtime="20230616 18:26:50.543"/>
+</kw>
+<status status="PASS" starttime="20230616 18:26:50.542" endtime="20230616 18:26:50.543"/>
+</kw>
+<status status="PASS" starttime="20230616 18:26:50.411" endtime="20230616 18:26:50.544"/>
+</test>
+<doc>[14/10/2019] https://franz-see.github.io/Robotframework-Database-Library/api/1.2.2/DatabaseLibrary.html
+Instale: "pip install -U robotframework-databaselibrary"
+Para acessar o BD o Robot precisa conhecer o DRIVER de cada banco, então precisamos instalar esse DRIVER também (instale apenas para o BD que você utiliza!) ...
+Para PostgreSQL: "pip install psycopg2"
+Para SQLite 3: não precisa instalar nada!
+Para MySQL: "pip install pymysql"
+Para SQL Server: "pip install pymssql"
+Para Oracle: "pip install cx-Oracle"</doc>
+<status status="PASS" starttime="20230616 18:26:50.362" endtime="20230616 18:26:50.547"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Database">Database</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

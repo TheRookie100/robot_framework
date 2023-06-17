@@ -1,0 +1,60 @@
+{
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.inlineSuggest.enabled": true,
+    "[html]": {
+        "breadcrumbs.showArrays": true,
+        "editor.suggest.insertMode": "replace",
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "files.associations": {
+        "*.html": "html"
+    },
+    "workbench.editorAssociations": {
+        "*.jfif": "default",
+        "*.pyc": "default",
+        "*.pdf": "pdf.preview"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": false,
+        "scminput": false,
+        "html": true
+    },
+    "redhat.telemetry.enabled": true,
+    "[python]": {
+        "breadcrumbs.showArrays": true,
+
+
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "terminal.integrated.commandsToSkipShell": [
+        "settings.json"
+    ],
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "git.openRepositoryInParentFolders": "never",
+    "[json]": {
+
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "window.zoomLevel": 1,
+    "files.autoSave": "afterDelay",
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+    
+}

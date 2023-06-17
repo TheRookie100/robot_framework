@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230605 01:51:42.677" rpa="false" schemaversion="3">
+<suite id="s1" name="Tc01" source="C:\Users\guilh\Downloads\robot_framework\project\test\voo\tc01.robot">
+<test id="s1-t1" name="TC01 - Reservando passagem de destinos dentro dos EUA na classe econômica" line="7">
+<kw name="Dado que eu acesse o php travels" library="login_steps">
+<kw name="Open Browser">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<msg timestamp="20230605 01:51:42.792" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20230605 01:51:42.792" endtime="20230605 01:51:42.793"/>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" starttime="20230605 01:51:42.796" endtime="20230605 01:51:42.796"/>
+</kw>
+<status status="FAIL" starttime="20230605 01:51:42.788" endtime="20230605 01:51:42.796"/>
+</kw>
+<kw name="E realize o cadastro" library="login_steps">
+<status status="NOT RUN" starttime="20230605 01:51:42.797" endtime="20230605 01:51:42.797"/>
+</kw>
+<kw name="E faça o Login" library="login_steps">
+<status status="NOT RUN" starttime="20230605 01:51:42.797" endtime="20230605 01:51:42.797"/>
+</kw>
+<kw name="Quando eu realizo uma busca de um vôo ida e volta" library="voo_steps">
+<status status="NOT RUN" starttime="20230605 01:51:42.798" endtime="20230605 01:51:42.798"/>
+</kw>
+<kw name="E saindo de Los Angeles EUA" library="voo_steps" sourcename="E saindo de ${Texto}">
+<status status="NOT RUN" starttime="20230605 01:51:42.798" endtime="20230605 01:51:42.798"/>
+</kw>
+<kw name="E fecho o navegador" library="login_steps">
+<status status="NOT RUN" starttime="20230605 01:51:42.799" endtime="20230605 01:51:42.799"/>
+</kw>
+<status status="FAIL" starttime="20230605 01:51:42.787" endtime="20230605 01:51:42.799">No keyword with name 'Open Browser' found.</status>
+</test>
+<status status="FAIL" starttime="20230605 01:51:42.679" endtime="20230605 01:51:42.801"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tc01">Tc01</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230605 01:51:42.723" level="ERROR">Error in file 'C:\Users\guilh\Downloads\robot_framework\project\steps\login\login_steps.robot' on line 3: Resource file '..\..\resource\setting.robot' does not exist.</msg>
+<msg timestamp="20230605 01:51:42.743" level="ERROR">Error in file 'C:\Users\guilh\Downloads\robot_framework\project\elements\home\home_elements.robot' on line 14: Setting variable '&amp;{home}' failed: Multiple errors:
+- Invalid dictionary variable item '//a[contains(text(),"Signup")]'. Items must use 'name=value' syntax or be dictionary variables themselves.
+- Invalid dictionary variable item '//a[contains(text(),"flights")]'. Items must use 'name=value' syntax or be dictionary variables themselves.
+- Invalid dictionary variable item '//a[contains(text(),"Visa")]'. Items must use 'name=value' syntax or be dictionary variables themselves.</msg>
+<msg timestamp="20230605 01:51:42.764" level="ERROR">Error in file 'C:\Users\guilh\Downloads\robot_framework\project\elements\voo\voo_elements.robot' on line 14: Setting variable '... Button_PrimeiraOpcao' failed: Invalid variable name '... Button_PrimeiraOpcao='.</msg>
+<msg timestamp="20230605 01:51:42.782" level="ERROR">Error in file 'C:\Users\guilh\Downloads\robot_framework\project\steps\voo\voo_steps.robot' on line 3: Resource file '..\..\resource\setting.robot' does not exist.</msg>
+</errors>
+</robot>

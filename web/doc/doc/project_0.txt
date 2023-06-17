@@ -1,0 +1,28 @@
+🔹 Seminários
+
+    📌 Seminário (Em dupla/trio):
+
+        Data da apresentação: 23 junho
+
+        Tempo de apresentação: 20 a 30 min
+
+        Valor: 20 pontos
+
+        Softwares a serem utilizados e suas equipes:
+
+        1. CUCUMBER (Gabriel, Linconl e Samael)
+
+        2. Robot Framework (Guilherme e Pedro)
+
+        3. SonarLint (Leonardo e Matheus)
+
+    📌  Utilizando uma das ferramentas de teste listadas acima, faça:
+
+        1 - Explique o funcionamento do software
+
+        2 - Demonstre o funcionamento do software na prática.
+
+        3 - Elabore um caso de teste. (indicando o tipo de teste que será feito)
+
+        4 - Você poderá utilizar projetos disponíveis no github ou gitlab para baixar os códigos e executar os testes.
+

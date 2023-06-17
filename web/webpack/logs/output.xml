@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230606 22:40:28.423" rpa="false" schemaversion="3">
+<suite id="s1" name="Teste 0" source="C:\Users\guilh\Downloads\robot_framework\web\webpack\teste_0.robot">
+<test id="s1-t1" name="Cenario 1 - Pesquisa do produto Xbox na Amazon" line="105">
+<kw name="Abrir o navegador e maximizar a janela">
+<arg>${AMAZON_URL}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230606 22:40:28.844" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.br/'.</msg>
+<status status="PASS" starttime="20230606 22:40:28.843" endtime="20230606 22:40:33.229"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230606 22:40:33.230" endtime="20230606 22:40:33.551"/>
+</kw>
+<status status="PASS" starttime="20230606 22:40:28.843" endtime="20230606 22:40:33.551"/>
+</kw>
+<kw name="Pesquisar produto na Amazon">
+<arg>${PRODUCT_1}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=twotabsearchtextbox</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230606 22:40:33.555" endtime="20230606 22:40:34.547"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=twotabsearchtextbox</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230606 22:40:34.548" level="INFO">Typing text 'Xbox Series X' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20230606 22:40:34.547" endtime="20230606 22:40:34.868"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//input[@value='Ir']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230606 22:40:34.870" level="INFO">Clicking button 'xpath=//input[@value='Ir']'.</msg>
+<status status="PASS" starttime="20230606 22:40:34.869" endtime="20230606 22:40:35.150"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//span[@class='a-color-state a-text-bold']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230606 22:40:35.150" endtime="20230606 22:40:35.667"/>
+</kw>
+<status status="PASS" starttime="20230606 22:40:33.554" endtime="20230606 22:40:35.667"/>
+</kw>
+<kw name="Espera até que a página contenha um elemento com a classe &quot;a-price-whole&quot;">
+<msg timestamp="20230606 22:40:35.680" level="FAIL">No keyword with name 'Espera até que a página contenha um elemento com a classe "a-price-whole"' found.</msg>
+<status status="FAIL" starttime="20230606 22:40:35.678" endtime="20230606 22:40:35.680"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//span[@class='a-price-whole']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20230606 22:40:35.681" endtime="20230606 22:40:35.681"/>
+</kw>
+<kw name="Tirar print da página">
+<arg>amazon_${PRODUCT_1}.png</arg>
+<status status="NOT RUN" starttime="20230606 22:40:35.682" endtime="20230606 22:40:35.682"/>
+</kw>
+<doc>Pesquisar o produto Xbox na Amazon e capturar o preço</doc>
+<status status="FAIL" starttime="20230606 22:40:28.841" endtime="20230606 22:40:35.686">No keyword with name 'Espera até que a página contenha um elemento com a classe "a-price-whole"' found.</status>
+</test>
+<test id="s1-t2" name="Cenario 2 - Pesquisa do produto PS5 na Amazon" line="119">
+<kw name="Abrir o navegador e maximizar a janela">
+<arg>${AMAZON_URL}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230606 22:40:35.697" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.br/'.</msg>
+<status status="PASS" starttime="20230606 22:40:35.697" endtime="20230606 22:40:42.478"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230606 22:40:42.479" endtime="20230606 22:40:42.749"/>
+</kw>
+<status status="PASS" starttime="20230606 22:40:35.693" endtime="20230606 22:40:42.749"/>
+</kw>
+<kw name="Pesquisar produto na Amazon">
+<arg>${PRODUCT_2}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=twotabsearchtextbox</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230606 22:40:42.751" endtime="20230606 22:40:43.129"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=twotabsearchtextbox</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230606 22:40:43.130" level="INFO">Typing text 'PlayStation 5' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20230606 22:40:43.129" endtime="20230606 22:40:43.603"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//input[@value='Ir']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230606 22:40:43.604" level="INFO">Clicking button 'xpath=//input[@value='Ir']'.</msg>
+<status status="PASS" starttime="20230606 22:40:43.603" endtime="20230606 22:40:44.098"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//span[@class='a-color-state a-text-bold']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230606 22:40:44.099" endtime="20230606 22:40:45.325"/>
+</kw>
+<status status="PASS" starttime="20230606 22:40:42.750" endtime="20230606 22:40:45.325"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//span[@class='a-price-whole']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230606 22:40:45.326" endtime="20230606 22:40:46.944"/>
+</kw>
+<kw name="Tirar print da página">
+<arg>amazon_${PRODUCT_2}.png</arg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${filename}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230606 22:40:47.782" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="amazon_PlayStation%205.png"&gt;&lt;img src="amazon_PlayStation%205.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230606 22:40:46.945" endtime="20230606 22:40:47.782"/>
+</kw>
+<status status="PASS" starttime="20230606 22:40:46.945" endtime="20230606 22:40:47.782"/>
+</kw>
+<doc>Pesquisar o produto PS5 na Amazon e capturar o preço</doc>
+<tag>amazon, games</tag>
+<status status="PASS" starttime="20230606 22:40:35.688" endtime="20230606 22:40:47.783"/>
+</test>
+<doc>Teste de pesquisa de produtos de games na Amazon</doc>
+<status status="FAIL" starttime="20230606 22:40:28.425" endtime="20230606 22:40:47.786"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">amazon, games</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Teste 0">Teste 0</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

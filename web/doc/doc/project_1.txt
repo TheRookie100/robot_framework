@@ -1,0 +1,24 @@
+🔹 Robot Framework
+
+    📌Ambiente de Teste(Desenvolvimento)
+    📌Documentos de Requisitos
+    📌Estrutura de Teste Robbot Framework
+    📌Testes de Aceitacao com Robot Framework (web - Selenium e Python)
+
+    📌Ambiente
+    📌Documentos
+    📌Estrutura
+    📌Testes 
+
+    📌  Utilizando uma das ferramentas de teste listadas acima, faça:
+
+        1 - Explique o funcionamento do software
+
+        2 - Demonstre o funcionamento do software na prática.
+
+        3 - Elabore um caso de teste. (indicando o tipo de teste que será feito)
+
+        4 - Você poderá utilizar projetos disponíveis no github ou gitlab para baixar os códigos e executar os testes.
+
+
+   
