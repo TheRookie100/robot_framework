@@ -606,62 +606,80 @@ Anvacado
     Em seguida, é possível usar as keywords da biblioteca em casos de teste.
 
 
-A biblioteca OperatingSystem fornece keywords para interagir com o sistema operacional em que o Robot Framework está sendo executado. Algumas das keywords mais usadas são:
+🔹 Biblioteca OperatingSystem 
 
-Get Environment Variable: Retorna o valor de uma variável de ambiente do sistema operacional.
-Get File: Retorna o conteúdo de um arquivo.
-Get File Size: Retorna o tamanho de um arquivo em bytes.
-Get Hostname: Retorna o nome do host do sistema.
-Get Process Id: Retorna o ID do processo atual.
-Get Special Folder Path: Retorna o caminho para uma pasta especial do sistema operacional, como a pasta de documentos ou a pasta de downloads.
-Get Time: Retorna a hora atual do sistema.
-List Directory: Retorna uma lista de arquivos e pastas em um diretório.
-Remove Directory: Remove um diretório e todo o seu conteúdo.
-Remove File: Remove um arquivo.
-Run: Executa um comando no terminal do sistema operacional.
-Set Environment Variable: Define o valor de uma variável de ambiente do sistema operacional.
-Sleep: Pausa a execução do teste por um determinado número de segundos.
-Start Process: Inicia um processo em segundo plano e retorna seu ID.
-Stop Process: Para um processo em segundo plano com base em seu ID.
-Essas são apenas algumas das keywords disponíveis na biblioteca OperatingSystem. Para ver a lista completa de keywords e suas descrições, consulte a documentação oficial do Robot Framework.
+    fornece keywords para interagir com o sistema operacional em que o Robot Framework 
+    está sendo executado. Algumas das keywords mais usadas são:
 
-A biblioteca String fornece keywords para manipular strings em testes do Robot Framework. Algumas das keywords mais usadas são:
+    Get Environment Variable: Retorna o valor de uma variável de ambiente do sistema operacional.
+    Get File: Retorna o conteúdo de um arquivo.
+    Get File Size: Retorna o tamanho de um arquivo em bytes.
+    Get Hostname: Retorna o nome do host do sistema.
+    Get Process Id: Retorna o ID do processo atual.
+    Get Special Folder Path: Retorna o caminho para uma pasta especial do sistema operacional, 
+    como a pasta de documentos ou a pasta de downloads.
+    Get Time: Retorna a hora atual do sistema.
+    List Directory: Retorna uma lista de arquivos e pastas em um diretório.
+    Remove Directory: Remove um diretório e todo o seu conteúdo.
+    Remove File: Remove um arquivo.
+    Run: Executa um comando no terminal do sistema operacional.
+    Set Environment Variable: Define o valor de uma variável de ambiente do sistema operacional.
+    Sleep: Pausa a execução do teste por um determinado número de segundos.
+    Start Process: Inicia um processo em segundo plano e retorna seu ID.
+    Stop Process: Para um processo em segundo plano com base em seu ID.
+    Essas são apenas algumas das keywords disponíveis na biblioteca OperatingSystem. Para ver a lista 
+    completa de keywords e suas descrições, consulte a documentação oficial do Robot Framework.
 
-Split String: Divide uma string em uma lista de substrings com base em um separador.
-Get Substring: Retorna uma substring de uma string com base em um índice inicial e final.
-Length Should Be: Verifica se o comprimento de uma string é igual a um valor especificado.
-Should Be Empty: Verifica se uma string está vazia.
-Should Contain: Verifica se uma string contém um determinado valor.
-Should End With: Verifica se uma string termina com um determinado valor.
-Should Match: Verifica se uma string corresponde a uma expressão regular.
-Should Not Be Empty: Verifica se uma string não está vazia.
-Should Not Contain: Verifica se uma string não contém um determinado valor.
-Should Not End With: Verifica se uma string não termina com um determinado valor.
-Should Not Match: Verifica se uma string não corresponde a uma expressão regular.
-Should Start With: Verifica se uma string começa com um determinado valor.
-To Lowercase: Converte uma string para minúsculas.
-To Uppercase: Converte uma string para maiúsculas.
-Essas são apenas algumas das keywords disponíveis na biblioteca String. Para ver a lista completa de keywords e suas descrições, consulte a documentação oficial do Robot Framework.
+🔹 Biblioteca String 
 
+    Fornece keywords para manipular strings em testes do Robot Framework. 
+    Algumas das keywords mais usadas são:
 
-A biblioteca Collections fornece keywords para trabalhar com listas, dicionários e outros tipos de coleções de dados. Algumas das keywords mais usadas são:
-Create Dictionary: Cria um dicionário com pares chave-valor especificados.
-Get From Dictionary: Retorna o valor de uma chave em um dicionário.
-Get Length: Retorna o comprimento de uma lista ou string.
-Get Slice: Retorna uma parte de uma lista ou string com base em um índice inicial e final.
-List Should Contain: Verifica se uma lista contém um determinado valor.
-List Should Not Contain: Verifica se uma lista não contém um determinado valor.
-Log List: Imprime uma lista no console de saída do Robot Framework.
-Remove From List: Remove um valor de uma lista.
-Set Variable If: Define o valor de uma variável com base em uma condição.
+    Split String: Divide uma string em uma lista de substrings com base em um separador.
+    Get Substring: Retorna uma substring de uma string com base em um índice inicial e final.
+    Length Should Be: Verifica se o comprimento de uma string é igual a um valor especificado.
+    Should Be Empty: Verifica se uma string está vazia.
+    Should Contain: Verifica se uma string contém um determinado valor.
+    Should End With: Verifica se uma string termina com um determinado valor.
+    Should Match: Verifica se uma string corresponde a uma expressão regular.
+    Should Not Be Empty: Verifica se uma string não está vazia.
+    Should Not Contain: Verifica se uma string não contém um determinado valor.
+    Should Not End With: Verifica se uma string não termina com um determinado valor.
+    Should Not Match: Verifica se uma string não corresponde a uma expressão regular.
+    Should Start With: Verifica se uma string começa com um determinado valor.
+    To Lowercase: Converte uma string para minúsculas.
+    To Uppercase: Converte uma string para maiúsculas.
+    Essas são apenas algumas das keywords disponíveis na biblioteca String. 
+    Para ver a lista completa de keywords e suas descrições, 
+    consulte a documentação oficial do Robot Framework.
 
 
-A biblioteca Process fornece keywords para trabalhar com processos em segundo plano. Algumas das keywords mais usadas são:
+🔹 Biblioteca Collections 
 
-Start Process: Inicia um processo em segundo plano e retorna seu ID.
-Stop Process: Para um processo em segundo plano com base em seu ID.
-Get Process Result: Retorna o resultado de um processo em segundo plano com base em seu ID.
-Get Process Return Code: Retorna o código de retorno de um processo em segundo plano com base em seu ID.
-Get Process Output: Retorna a saída de um processo em segundo plano com base em seu ID.
-Get Process Error Output: Retorna a saída de erro de um processo em segundo plano com base em seu ID.
-Essas são apenas algumas das keywords disponíveis nas bibliotecas Collections e Process. Para ver a lista completa de keywords e suas descrições, consulte a documentação oficial do Robot Framework.
+    Fornece keywords para trabalhar com listas, dicionários e outros 
+    tipos de coleções de dados. Algumas das keywords mais usadas são:
+
+    Create Dictionary: Cria um dicionário com pares chave-valor especificados.
+    Get From Dictionary: Retorna o valor de uma chave em um dicionário.
+    Get Length: Retorna o comprimento de uma lista ou string.
+    Get Slice: Retorna uma parte de uma lista ou string com base em um índice inicial e final.
+    List Should Contain: Verifica se uma lista contém um determinado valor.
+    List Should Not Contain: Verifica se uma lista não contém um determinado valor.
+    Log List: Imprime uma lista no console de saída do Robot Framework.
+    Remove From List: Remove um valor de uma lista.
+    Set Variable If: Define o valor de uma variável com base em uma condição.
+
+
+🔹 Biblioteca Process
+    
+    Fornece keywords para trabalhar com processos em segundo plano. 
+    Algumas das keywords mais usadas são:
+
+    Start Process: Inicia um processo em segundo plano e retorna seu ID.
+    Stop Process: Para um processo em segundo plano com base em seu ID.
+    Get Process Result: Retorna o resultado de um processo em segundo plano com base em seu ID.
+    Get Process Return Code: Retorna o código de retorno de um processo em segundo plano com base em seu ID.
+    Get Process Output: Retorna a saída de um processo em segundo plano com base em seu ID.
+    Get Process Error Output: Retorna a saída de erro de um processo em segundo plano com base em seu ID.
+    Essas são apenas algumas das keywords disponíveis nas bibliotecas Collections e Process. 
+    Para ver a lista completa de keywords e suas descrições, consulte a documentação oficial do Robot Framework.
