@@ -13,6 +13,6 @@ Converter "${CONTEUDO}" para ${ALGORITMO}
     ${CONTEUDO_HASH}   Gerar Hash    ${CONTEUDO}    ${ALGORITMO}
     Log   ${CONTEUDO_HASH}
 
-Converter o arquivo "${CAMINHO_ARQUIVO}" para ${ALGORITMO}
-    ${CONTEUDO_HASH}   Gerar Hash Arquivo   ${CAMINHO_ARQUIVO}    ${ALGORITMO}
-    Log   ${CONTEUDO_HASH}
+#Converter o arquivo "${CAMINHO_ARQUIVO}" para ${ALGORITMO}
+   # ${CONTEUDO_HASH}   Gerar Hash Arquivo   ${CAMINHO_ARQUIVO}    ${ALGORITMO}
+   # Log   ${CONTEUDO_HASH}
