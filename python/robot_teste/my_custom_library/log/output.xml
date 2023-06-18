@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230618 16:13:31.560" rpa="false" schemaversion="3">
+<suite id="s1" name="Hashlibrary" source="C:\Users\guilh\Downloads\robot_framework\python\robot_teste\my_custom_library\hashlibrary.robot">
+<test id="s1-t1" name="Teste de conversão de string para HASH sha256" line="5">
+<kw name="Converter &quot;Estou ficando ninja em Robot Framework!!&quot; para sha256" sourcename="Converter &quot;${CONTEUDO}&quot; para ${ALGORITMO}">
+<kw name="Gerar Hash" library="geradorHash">
+<var>${CONTEUDO_HASH}</var>
+<arg>${CONTEUDO}</arg>
+<arg>${ALGORITMO}</arg>
+<msg timestamp="20230618 16:13:31.642" level="INFO">${CONTEUDO_HASH} = 6526496e1589bb11988c5fd1051d8927a1160b1c3da51ca93ff6e2eab6ecfa38</msg>
+<status status="PASS" starttime="20230618 16:13:31.642" endtime="20230618 16:13:31.642"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${CONTEUDO_HASH}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230618 16:13:31.643" level="INFO">6526496e1589bb11988c5fd1051d8927a1160b1c3da51ca93ff6e2eab6ecfa38</msg>
+<status status="PASS" starttime="20230618 16:13:31.642" endtime="20230618 16:13:31.643"/>
+</kw>
+<status status="PASS" starttime="20230618 16:13:31.641" endtime="20230618 16:13:31.643"/>
+</kw>
+<status status="PASS" starttime="20230618 16:13:31.640" endtime="20230618 16:13:31.644"/>
+</test>
+<status status="PASS" starttime="20230618 16:13:31.563" endtime="20230618 16:13:31.646"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Hashlibrary">Hashlibrary</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
