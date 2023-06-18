@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230618 16:13:31.560" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230618 16:27:17.023" rpa="false" schemaversion="3">
 <suite id="s1" name="Hashlibrary" source="C:\Users\guilh\Downloads\robot_framework\python\robot_teste\my_custom_library\hashlibrary.robot">
 <test id="s1-t1" name="Teste de conversão de string para HASH sha256" line="5">
 <kw name="Converter &quot;Estou ficando ninja em Robot Framework!!&quot; para sha256" sourcename="Converter &quot;${CONTEUDO}&quot; para ${ALGORITMO}">
@@ -7,20 +7,20 @@
 <var>${CONTEUDO_HASH}</var>
 <arg>${CONTEUDO}</arg>
 <arg>${ALGORITMO}</arg>
-<msg timestamp="20230618 16:13:31.642" level="INFO">${CONTEUDO_HASH} = 6526496e1589bb11988c5fd1051d8927a1160b1c3da51ca93ff6e2eab6ecfa38</msg>
-<status status="PASS" starttime="20230618 16:13:31.642" endtime="20230618 16:13:31.642"/>
+<msg timestamp="20230618 16:27:17.082" level="INFO">${CONTEUDO_HASH} = 6526496e1589bb11988c5fd1051d8927a1160b1c3da51ca93ff6e2eab6ecfa38</msg>
+<status status="PASS" starttime="20230618 16:27:17.081" endtime="20230618 16:27:17.082"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${CONTEUDO_HASH}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230618 16:13:31.643" level="INFO">6526496e1589bb11988c5fd1051d8927a1160b1c3da51ca93ff6e2eab6ecfa38</msg>
-<status status="PASS" starttime="20230618 16:13:31.642" endtime="20230618 16:13:31.643"/>
+<msg timestamp="20230618 16:27:17.083" level="INFO">6526496e1589bb11988c5fd1051d8927a1160b1c3da51ca93ff6e2eab6ecfa38</msg>
+<status status="PASS" starttime="20230618 16:27:17.082" endtime="20230618 16:27:17.083"/>
 </kw>
-<status status="PASS" starttime="20230618 16:13:31.641" endtime="20230618 16:13:31.643"/>
+<status status="PASS" starttime="20230618 16:27:17.080" endtime="20230618 16:27:17.084"/>
 </kw>
-<status status="PASS" starttime="20230618 16:13:31.640" endtime="20230618 16:13:31.644"/>
+<status status="PASS" starttime="20230618 16:27:17.079" endtime="20230618 16:27:17.084"/>
 </test>
-<status status="PASS" starttime="20230618 16:13:31.563" endtime="20230618 16:13:31.646"/>
+<status status="PASS" starttime="20230618 16:27:17.026" endtime="20230618 16:27:17.088"/>
 </suite>
 <statistics>
 <total>
