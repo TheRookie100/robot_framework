@@ -24,3 +24,7 @@ Converter o arquivo "${FILE}" para sha256
 
 Abrir meu browser
     My Open Browser    http://www.robotframework.org    chrome
+
+
+# Para rodar um library personaliza que vai esta no seu local e nao vai acesar a psta do python voce precisa 
+# usar o comando python -m robot -d ./Results ./Tests/HashLibrary.robot

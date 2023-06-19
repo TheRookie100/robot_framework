@@ -13,6 +13,3 @@ Converter "${CONTEUDO}" para sha256
     ${CONTEUDO_HASH}   Gerar Hash    ${CONTEUDO}
     Log   ${CONTEUDO_HASH}
 
-Converter o arquivo "${FILE}" para sha256
-    ${CONTEUDO_HASH}   Gerar Hash Arquivo   ./${FILE}
-    Log   ${CONTEUDO_HASH}
