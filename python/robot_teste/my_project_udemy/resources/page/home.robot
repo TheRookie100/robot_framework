@@ -6,7 +6,7 @@ Library    String
 ${HOME_URL}                    http://automationpractice.com
 ${HOME_TITLE}                  My Store
 ${HOME_TOPMENU}                xpath=//*[@id="center_column"]//img[@alt="Faded Short Sleeve T-shirts"]
-${HOME_PRODUCT}           xpath=//*[@id="center_column"]//img[@alt="Faded Short Sleeve T-shirts"]
+${HOME_PRODUCT}                xpath=//*[@id="center_column"]//img[@alt="Faded Short Sleeve T-shirts"]
 
 *** Keywords ***
 #### Ações
