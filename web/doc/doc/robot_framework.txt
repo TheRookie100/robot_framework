@@ -17,7 +17,7 @@
     Robotframework - Testes de interface
     
     📌 Algumas das bibliotecas mais populares são:
-
+        pip install -U robotframework-requests==0.7.2 - Automação de teste de aceitação
         pip install scrapy  - Crawler spider para pegar dados da web
         pip install mysql-connector-python - Conexão com banco de dados MySQL
         pip install cryptography - Criptografia em Python 

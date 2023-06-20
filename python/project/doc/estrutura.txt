@@ -135,3 +135,14 @@ um email e senha fictícios e fecha a página.
 Agora, para executar o teste, basta executar o seguinte comando na pasta raiz do projeto:
 robot --outputdir results tests/login_test.robot
 
+O comando robot -d log -v BROWSER:headlesschrome executa os testes do Robot 
+Framework com a opção de log habilitada e a variável BROWSER definida como headlesschrome.
+
+A opção -d log especifica o diretório onde os logs dos testes serão armazenados. 
+A opção -v BROWSER:headlesschrome define a variável BROWSER como headlesschrome, 
+que é uma opção para executar o navegador em modo headless (sem interface gráfica).
+
+Certifique-se de que o valor headlesschrome é suportado pelo driver do navegador 
+que você está usando. Se você estiver usando o ChromeDriver, por exemplo, 
+certifique-se de que a versão do ChromeDriver seja compatível 
+com a versão do Chrome que você está usando.
