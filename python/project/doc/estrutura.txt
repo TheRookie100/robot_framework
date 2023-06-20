@@ -1,0 +1,137 @@
+my_project/
+├── resources/
+│   ├── locators/
+│   │   ├── home_page_locators.robot
+│   │   └── login_page_locators.robot
+│   ├── pages/
+│   │   ├── __init__.robot
+│   │   ├── home_page.robot
+│   │   └── login_page.robot
+│   └── variables.robot
+├── tests/
+│   ├── __init__.robot
+│   └── login_test.robot
+└── results/
+
+A pasta resources contém os recursos do projeto, como locators, 
+páginas e variáveis. A pasta tests contém os casos de teste do projeto. 
+A pasta results conterá os resultados dos testes.
+
+Agora, vamos criar os arquivos de recursos. Primeiro, vamos criar
+o arquivo variables.robot na pasta resources:
+
+*** Variables ***
+${BASE_URL}    https://phptravels.net/
+${BROWSER}     chrome
+
+Esse arquivo define duas variáveis: ${BASE_URL} que contém a URL base 
+do site e ${BROWSER} que contém o nome do navegador a ser usado.
+
+
+Agora, vamos criar o arquivo home_page_locators.robot na pasta resources/locators:
+
+*** Variables ***
+${LOGIN_LINK}    xpath=//a[@href="#login"]
+Esse arquivo define o locator ${LOGIN_LINK} que contém o xpath do link "Login" na página inicial.
+
+
+Agora, vamos criar o arquivo login_page_locators.robot na pasta resources/locators:
+
+*** Variables ***
+${EMAIL_FIELD}      name=email
+${PASSWORD_FIELD}   name=password
+${LOGIN_BUTTON}     xpath=//button[@type="submit"]
+
+Esse arquivo define os locators ${EMAIL_FIELD}, ${PASSWORD_FIELD} e ${LOGIN_BUTTON} 
+que correspondem aos campos de email, senha e botão de login na página de login.
+
+
+Agora, vamos criar o arquivo __init__.robot na pasta resources/pages:
+
+*** Settings ***
+Library    SeleniumLibrary
+Resource   ../variables.robot
+
+*** Variables ***
+${PAGE_TITLE}    PHPTRAVELS | Travel Technology Partner
+
+*** Keywords ***
+Open Page
+    Open Browser    ${BASE_URL}    ${BROWSER}
+    Maximize Browser Window
+    Set Browser Implicit Wait    10s
+    Set Browser Timeout    30s
+    Title Should Be    ${PAGE_TITLE}
+
+Close Page
+    Close Browser
+
+Esse arquivo define a biblioteca SeleniumLibrary e importa as variáveis do 
+arquivo variables.robot. Ele também define a keyword Open Page que abre o 
+navegador e navega para a página inicial do site. A keyword Close Page fecha o navegador.
+
+
+Agora, vamos criar o arquivo home_page.robot na pasta resources/pages:
+
+*** Settings ***
+Library    SeleniumLibrary
+Resource   ../variables.robot
+Resource   ../locators/home_page_locators.robot
+
+*** Variables ***
+${PAGE_TITLE}    PHPTRAVELS | Travel Technology Partner
+
+*** Keywords ***
+Click Login Link
+    Click Element    ${LOGIN_LINK}
+
+Esse arquivo define a biblioteca SeleniumLibrary e importa as variáveis e 
+locators dos arquivos variables.robot e home_page_locators.robot, 
+respectivamente. Ele também define a keyword Click Login Link que 
+clica no link "Login" na página inicial.
+
+
+Agora, vamos criar o arquivo login_page.robot na pasta resources/pages:
+
+*** Settings ***
+Library    SeleniumLibrary
+Resource   ../variables.robot
+Resource   ../locators/login_page_locators.robot
+
+*** Variables ***
+${PAGE_TITLE}    Login
+
+*** Keywords ***
+Fill Login Form
+    [Arguments]    ${email}    ${password}
+    Input Text    ${EMAIL_FIELD}    ${email}
+    Input Text    ${PASSWORD_FIELD}    ${password}
+    Click Element    ${LOGIN_BUTTON}
+
+Esse arquivo define a biblioteca SeleniumLibrary e importa as variáveis 
+e locators dos arquivos variables.robot e login_page_locators.robot, 
+respectivamente. Ele também define a keyword Fill Login Form que preenche 
+o formulário de login com o email e senha fornecidos e clica no botão de login.
+
+
+Agora, vamos criar o arquivo login_test.robot na pasta tests:
+
+*** Settings ***
+Resource    ../resources/pages/home_page.robot
+Resource    ../resources/pages/login_page.robot
+
+*** Test Cases ***
+Login Test
+    Open Page
+    Click Login Link
+    Fill Login Form    test@example.com    password123
+    Close Page
+
+Esse arquivo importa as páginas home_page.robot e login_page.robot e 
+define o caso de teste Login Test. Esse caso de teste abre a página 
+inicial, clica no link "Login", preenche o formulário de login com 
+um email e senha fictícios e fecha a página.
+
+Agora, para executar o teste, basta executar o seguinte comando na pasta raiz do projeto:
+robot --outputdir results tests/login_test.robot
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230620 01:56:52.446" rpa="false" schemaversion="3">
+<suite id="s1" name="Login Test" source="C:\Users\guilh\Downloads\robot_framework\python\project\test\login_test.robot">
+<test id="s1-t1" name="Login Test" line="6">
+<kw name="Open Page">
+<msg timestamp="20230620 01:56:52.488" level="FAIL">No keyword with name 'Open Page' found.</msg>
+<status status="FAIL" starttime="20230620 01:56:52.488" endtime="20230620 01:56:52.488"/>
+</kw>
+<kw name="Click Login Link">
+<status status="NOT RUN" starttime="20230620 01:56:52.490" endtime="20230620 01:56:52.490"/>
+</kw>
+<kw name="Fill Login Form">
+<arg>test@example.com</arg>
+<arg>password123</arg>
+<status status="NOT RUN" starttime="20230620 01:56:52.496" endtime="20230620 01:56:52.496"/>
+</kw>
+<kw name="Close Page">
+<status status="NOT RUN" starttime="20230620 01:56:52.498" endtime="20230620 01:56:52.498"/>
+</kw>
+<status status="FAIL" starttime="20230620 01:56:52.485" endtime="20230620 01:56:52.499">No keyword with name 'Open Page' found.</status>
+</test>
+<status status="FAIL" starttime="20230620 01:56:52.449" endtime="20230620 01:56:52.500"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login Test">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230620 01:56:52.481" level="ERROR">Error in file 'C:\Users\guilh\Downloads\robot_framework\python\project\test\login_test.robot' on line 2: Resource file '..\resources\pages\home_page.robot' does not exist.</msg>
+<msg timestamp="20230620 01:56:52.483" level="ERROR">Error in file 'C:\Users\guilh\Downloads\robot_framework\python\project\test\login_test.robot' on line 3: Resource file '..\resources\pages\login_page.robot' does not exist.</msg>
+</errors>
+</robot>
