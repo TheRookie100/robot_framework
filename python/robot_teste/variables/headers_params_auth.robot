@@ -9,6 +9,9 @@ Resource            ./variables/my_user_and_passwords.robot
 ${GITHUB_HOST}      https://api.github.com
 ${ISSUES_URI}       /repos/mayribeirofernandes/myudemyrobotframeworkcourse/issues
 
+#https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api?apiVersion=2022-11-28
+#https://docs.github.com/pt/rest/overview/resources-in-the-rest-api?apiVersion=2022-11-28
+
 *** Test Cases ***
 Exemplo: Fazendo autenticação básica (Basic Authentication)
     # Conectar com autenticação básica na API do GitHub
