@@ -21,14 +21,14 @@ Verifica sucesso na execução do processo
 
 Execute um script e aguarde ele finalizar com sucesso
     ## Inicia o processo e espera pelo seu término
-    ${MEU_PROCESSO}     Run Process     python   alunos_cornos.py
+    ${MEU_PROCESSO}     Run Process     python   alunos.py
     Log    Resultado da execução (sucesso/falha): ${MEU_PROCESSO.rc}
     Log    Saída da execução: ${MEU_PROCESSO.stdout}
     Verifica sucesso na execução do processo      ${MEU_PROCESSO}
 
 Execute um script e aguarde ele finalizar com falha
     ## Inicia o processo e espera pelo seu término
-    ${MEU_PROCESSO}     Run Process     python   alunos_cornos_fail.py
+    ${MEU_PROCESSO}     Run Process     python   alunos_fail.py
     Log    Resultado da execução (sucesso/falha): ${MEU_PROCESSO.rc}
     Log    Saída da execução: ${MEU_PROCESSO.stdout}
     Log    Falha da execução: ${MEU_PROCESSO.stderr}
