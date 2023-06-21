@@ -1,0 +1,69 @@
+"""
+{
+    "pessoa": {
+        "nome": {
+            "primeiro_nome": "mayara",
+            "nomes_do_meio": "ribeiro",
+            "ultimo_nome": "fernandes",
+            "apelido": "May"
+        },
+        "hobbies": {
+            "livros": [
+                {
+                    "titulo": "O Símbolo Perdido",
+                    "autor": "Dan Brown"
+                },
+                {
+                    "titulo": "Sócios no Crime",
+                    "autor": "Agatha Christie"
+                },
+                {
+                    "titulo": "Fortaleza Digital",
+                    "autor": "Dan Brown"
+                }
+            ],
+            "games": {
+                "PC": [
+                    "World Of Warcraft",
+                    "Last War",
+                    "Aika"
+                ],
+                "Xbox": [
+                    "Plants vs Zombies",
+                    "Battle Field",
+                    "Diablo III"
+                ]
+            }
+        }
+    }
+}
+
+# JSON 
+#
+# é um formato de dados que permite representar informações de forma estruturada. No exemplo abaixo, 
+# temos um objeto chamado "pessoa", #que contém dois objetos: "nome" e "hobbies". O objeto "nome"
+# possui quatro atributos: "primeiro_nome", "nomes_do_meio", "ultimo_nome" e "apelido". 
+# Já o objeto "hobbies" possui dois atributos: "livros" e "games". O atributo "livros" é uma lista de 
+# objetos, onde cada objeto representa um livro e possui dois atributos: "titulo" e "autor". 
+# Já o atributo "games" é um objeto que contém duas # listas: "PC" e "Xbox". Cada lista contém uma série de jogos.
+# É importante notar que, no JSON, os objetos são delimitados por chaves "{}", enquanto as listas 
+# são delimitadas por colchetes "[]". Cada # #atributo é representado por uma chave e um valor separados por dois pontos ":".
+
+# Json - Texto Curso Udemy
+#
+# Aqui eu tenho um exemplo e eu criei aqui um json (objeto) pessoa então aqui se você fechar um objeto do tipo
+# pessoa certa se você abrir aqui ele tem um outro objeto que é o nome.
+# Aqui tem outro objeto que é Hobbes.
+# Beleza então a pessoa tem dois objetos e é nome então tem alguns atributos então o objeto nome tem quatro
+# atributos certo que é primeiro nome em nome do meio.
+# O último nome e apelido então quando a gente está com chaves a gente chama de objeto de divisão e o
+# que tem chave é valor é um atributo do objeto ao qual ele pertence. No caso então é nome dessa pessoa.
+# Aqui nesse exemplo tem dois atributos nome e Hobbes que são um tipo um objeto um tipo objeto e eles
+# têm atributos.Pois bem dentro de Hobbes tem um outro objeto chamado livres.
+# Na verdade é um objeto do tipo de lista porque tem essa.
+# Esse colchetes quando tem colchetes é uma lista certo.
+# Então livros é uma lista de livros e cada livro é um mini dicionário ou um mini mini dicionário ou um
+# objeto que tem dois atributos. No caso do título é autor certo então tem uma lista de livros e onde cada livro é um objeto com dois
+# atributos beleza. Então aqui quem não está acostumado ainda a trabalhar com o ISON.
+# Esse é basicamente o formato de um dia ou é um objeto uma lista pode ter um outro objeto dentro de um
+"""
