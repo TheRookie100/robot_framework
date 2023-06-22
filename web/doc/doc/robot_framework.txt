@@ -17,6 +17,10 @@
     Robotframework - Testes de interface
     
     📌 Algumas das bibliotecas mais populares são:
+        pip3 install robotframework (Para instalar o Robot)
+        pip3 install robotframework-faker (Para instalar o Faker) 
+        pip3 install robotframework-requests==0.5.0 (Para instalar o Requests)
+        pip3 install robotframework-seleniumlibrary (Para instalar o selenium library) 
         pip install -U robotframework-requests==0.7.2 - Automação de teste de aceitação
         pip install scrapy  - Crawler spider para pegar dados da web
         pip install mysql-connector-python - Conexão com banco de dados MySQL
