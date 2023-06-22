@@ -557,8 +557,8 @@
         - Olhe o log da execucao em caso de falha
         - Otimeze seu codigo para que ele seja facil de ler e manter
 
-Anvacado
-🔹 Bibliotecas Built-in 
+
+🔹 Bibliotecas Built-in - Bibliotecas Anvacadas
 
     📌 O que são bibliotecas built-in
 
