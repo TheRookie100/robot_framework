@@ -56,6 +56,27 @@
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    /*
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#e7e7e799",
+        "activityBar.background": "#e7e7e799",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#4414b5",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#e7e7e799",
+        "statusBar.background": "#e7e7e799",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#e7e7e799",
+        "statusBarItem.remoteBackground": "#e7e7e799",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#e7e7e799",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#e7e7e799",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    */
     
 }
